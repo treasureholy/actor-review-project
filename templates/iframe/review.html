@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/review.css') }}"
+    />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{{ url_for('static', filename='js/review.js') }}"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper__header">
+        <div class="wrapper__title">
+          <div class="title">작품리뷰</div>
+          <div class="subtitle">comments</div>
+        </div>
+        <div class="divideLine"></div>
+      </div>
+    </div>
+    <div class="mypost">
+      <div class="movie">
+        <select
+          class="form-select form-select-sm"
+          id="movie-select"
+          aria-label=".form-select-sm example"
+        >
+          <option selected>작품 제목</option>
+          <option value="타짜">타짜</option>
+          <option value="도둑들">도둑들</option>
+          <option value="관상">관상</option>
+          <option value="굿바이 싱글">굿바이 싱글</option>
+          <option value="시그널">시그널</option>
+          <option value="직장의 신">직장의 신</option>
+        </select>
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          id="comment"
+          placeholder="리뷰를 작성해주세요."
+          aria-label="리뷰를 작성해주세요."
+        />
+      </div>
+      <select id="movie_star">
+        <option selected>별점</option>
+        <option value="1">⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+      </select>
+      <div class="mybtn">
+        <button type="button" class="btn btn-secondary">작성</button>
+      </div>
+    </div>
+    <div class="mycards">
+      <div class="row row-cols-4 g-2" id="cards-box">
+        <div class="col col-sm-4">
+          <div class="card h-100">
+            <img
+              src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">영화 제목이 들어갑니다</h5>
+              <p>⭐⭐⭐</p>
+              <p class="mycomment">나의 한줄 평을 씁니다</p>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-4">
+          <div class="card h-100">
+            <img
+              src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">영화 제목이 들어갑니다</h5>
+              <p>⭐⭐⭐</p>
+              <p class="mycomment">나의 한줄 평을 씁니다</p>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-4">
+          <div class="card h-100">
+            <img
+              src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">영화 제목이 들어갑니다</h5>
+              <p>⭐⭐⭐</p>
+              <p class="mycomment">나의 한줄 평을 씁니다</p>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-4">
+          <div class="card h-100">
+            <img
+              src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">영화 제목이 들어갑니다</h5>
+              <p>⭐⭐⭐</p>
+              <p class="mycomment">나의 한줄 평을 씁니다</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>출발! 비디오여행</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <audio src="../static/[Lyrics Video] Free Style(프리스타일) - Y (Please Tell Me Why).mp3" controls loop></audio>
+  </head>
+  <body>
+    <div class="background">
+      <div class="outerbox">
+        <div class="wrapper">
+          <div class="wrapper__left">
+            <div class="wrapper__left__header">
+              <div class="counter">
+                <div class="today_box">
+                  <dl class="today-line">
+                    <dt>TODAY</dt><dd><span id="today_count"></span></dd>
+                  </dl>
+                  <dl class="total-line">
+                    <dt> | TOTAL</dt>  <dd><span id="total_count"></span></dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="wrapper__left__body">
+              <div class="left__body__header">
+                <div class="left__body__header__gray"></div>
+                <image
+                  class="kim-thumbnail"
+                  src="{{ url_for('static', filename='image/kim.webp') }}"
+                  alt="이미지"
+                ></image>
+                <div class="left__body__header__line"></div>
+              </div>
+              <div class="left__body__profile">
+                <div class="profile__detail">이름 | 김혜수</div>
+                <div class="profile__detail">직업 | 영화배우</div>
+
+                <div class="profile__detail">소속 | 호두앤유엔터테이먼트</div>
+              </div>
+              <div class="left__body__footer">
+                <div class="warpper__feel">
+                  <div class="feel__title">오늘의 기분</div>
+                  <select class="feel__select">
+                    <option>기쁨😊</option>
+                    <option>슬픔🤣</option>
+                    <option>화남😒</option>
+                    <option>생각🤔</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrapper__right">
+            <div class="wrapper__right__header">
+              <div class="right__header__title">📽️출발! 배우여행 [김혜수]</div>
+              <div class="right__header__setting">P4J1</div>
+            </div>
+            <div class="wrapper__right__body">
+              <iframe
+                style="border-radius: 15px"
+                id="contentFrame"
+                src="{{ url_for('iframe_home') }}"
+              ></iframe>
+            </div>
+          </div>
+          <div class="navigation">
+            <div class="navigation__item" id="menuHome" onclick="menuHome()">
+              배우소개
+            </div>
+            <div
+              class="navigation__item"
+              id="menuReview"
+              onclick="menuReview()"
+            >
+              작품리뷰
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
